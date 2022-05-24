@@ -10,10 +10,11 @@ public class HelloController {
     @FXML
     private Label welcomeText;
 
+    private Calculate calculate = new Calculate();
     @FXML
     private CheckBox checkBox1, checkBox2, checkBox3, checkBox4;
     @FXML
-    private TextField textField1, textField2, textField3, textField4, textField5, textField6, textField7, textField8;
+    private TextField textField1, textField2, textField3, textField4, textField5, textField6, textField7, textField8,textFieldCalculate;
 
     @FXML
     protected void onChecboxActive() {
@@ -53,4 +54,26 @@ public class HelloController {
         }
     }
 
+    @FXML
+    protected void onActionButton(){
+
+        int va = calculate();
+
+        textFieldCalculate.setText(String.valueOf(va));
+    }
+
+    public Integer calculate(){
+        int value3 = 0;
+        if (checkBox1.isSelected()){
+            int value1  = Integer.parseInt(textField1.getText().trim());
+            int value2 = Integer.parseInt(textField2.getText().trim());
+            value3 = value1 * value2 ;
+
+        }
+        else {
+            System.out.println("TEST");
+        }
+
+        return value3;
+    }
 }
