@@ -1,8 +1,12 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import javafx.scene.control.Button?>
+<?import java.lang.String?>
+<?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
@@ -15,7 +19,6 @@
             <Font name="Comic Sans MS" size="15.0" />
          </font>
       </Text>
-      <Button fx:id="buttonCalculate" layoutX="561.0" layoutY="513.0" mnemonicParsing="false" onAction="#onActionButton" text="Calculate Electricity Consumption" />
       <TextField fx:id="textField1" layoutX="57.0" layoutY="248.0" prefHeight="26.0" prefWidth="70.0" />
       <TextField fx:id="textField2" layoutX="57.0" layoutY="313.0" prefHeight="26.0" prefWidth="70.0" />
       <TextField fx:id="textField3" layoutX="162.0" layoutY="248.0" prefHeight="26.0" prefWidth="70.0" />
@@ -32,8 +35,37 @@
       <Text layoutX="162.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 2" />
       <Text layoutX="256.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 3" />
       <Text layoutX="361.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 4" />
-      <TextField fx:id="textFieldCalculate" layoutX="377.0" layoutY="516.0" />
-      <Text layoutX="413.0" layoutY="509.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consumption" />
-      <ComboBox fx:id="comboBox1" layoutX="47.0" layoutY="484.0" prefWidth="150.0" />
+      <TextField fx:id="textFieldCalculate" layoutX="569.0" layoutY="540.0" />
+      <Text layoutX="605.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consumption" />
+      <ComboBox fx:id="comboBox" layoutX="23.0" layoutY="483.0" onAction="#priceOfKwh" prefHeight="27.0" prefWidth="184.0" value="Zachodnio-pomorskie">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="Zachodnio-pomorskie" />
+               <String fx:value="Pomorskie" />
+               <String fx:value="Wielkopolskie" />
+            </FXCollections>
+         </items>
+      </ComboBox>
+      <TextField fx:id="textFieldPrice" editable="false" layoutX="26.0" layoutY="540.0" onAction="#priceOfKwh" prefHeight="26.0" prefWidth="70.0" />
+      <Text layoutX="26.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price of kwh" wrappingWidth="89.0" />
+      <MenuBar layoutX="-2.0" prefHeight="26.0" prefWidth="800.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="File">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Close" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Edit">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Delete" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Help">
+            <items>
+              <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#aboutInfo" text="About" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
    </children>
 </AnchorPane>
