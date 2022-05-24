@@ -7,8 +7,7 @@
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1">
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pompy.projektpompy.HelloController">
    <children>
       <Text layoutX="343.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp Calculator" wrappingWidth="114.13671875">
          <font>
@@ -24,10 +23,10 @@
       <TextField fx:id="textField6" layoutX="256.0" layoutY="313.0" prefHeight="26.0" prefWidth="70.0" />
       <TextField fx:id="textField7" layoutX="361.0" layoutY="248.0" prefHeight="26.0" prefWidth="70.0" />
       <TextField fx:id="textField8" layoutX="365.0" layoutY="313.0" prefHeight="26.0" prefWidth="70.0" />
-      <CheckBox fx:id="checkBox1" layoutX="56.0" layoutY="362.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Active" />
-      <CheckBox fx:id="checkBox2" layoutX="162.0" layoutY="362.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Active" />
-      <CheckBox fx:id="checkBox3" layoutX="256.0" layoutY="362.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Active" />
-      <CheckBox fx:id="checkBox4" layoutX="355.0" layoutY="362.0" mnemonicParsing="false" prefHeight="30.0" prefWidth="70.0" text="Active" />
+      <CheckBox fx:id="checkBox1" layoutX="56.0" layoutY="362.0" mnemonicParsing="false" onAction="#onChecboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <CheckBox fx:id="checkBox2" layoutX="162.0" layoutY="362.0" mnemonicParsing="false" onAction="#onChecboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <CheckBox fx:id="checkBox3" layoutX="256.0" layoutY="362.0" mnemonicParsing="false" onAction="#onChecboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <CheckBox fx:id="checkBox4" layoutX="355.0" layoutY="362.0" mnemonicParsing="false" onAction="#onChecboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
       <Text layoutX="57.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 1" />
       <Text layoutX="162.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 2" />
       <Text layoutX="256.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 3" />
