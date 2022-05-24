@@ -1,0 +1,7 @@
+.my-text-area:orangered .content {
+   -fx-background-color: orangered ;
+}
+
+.my-text-area:green .content {
+   -fx-background-color: green ;
+}

@@ -4,37 +4,39 @@
 <?import javafx.collections.FXCollections?>
 <?import javafx.scene.control.CheckBox?>
 <?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.CustomMenuItem?>
 <?import javafx.scene.control.Menu?>
 <?import javafx.scene.control.MenuBar?>
 <?import javafx.scene.control.MenuItem?>
 <?import javafx.scene.control.TextField?>
+<?import javafx.scene.input.KeyCodeCombination?>
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Font?>
 <?import javafx.scene.text.Text?>
 
-<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#sumPumps" prefHeight="600.0" prefWidth="800.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pompy.projektpompy.HelloController">
+<AnchorPane fx:id="anchorPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" onKeyTyped="#sumPumps" prefHeight="600.0" prefWidth="800.0" stylesheets="@../../../main.css" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.pompy.projektpompy.HelloController">
    <children>
       <Text layoutX="343.0" layoutY="63.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp Calculator" wrappingWidth="114.13671875">
          <font>
             <Font name="Comic Sans MS" size="15.0" />
          </font>
       </Text>
-      <TextField fx:id="textField1" layoutX="57.0" layoutY="248.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField2" layoutX="57.0" layoutY="313.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField3" layoutX="162.0" layoutY="248.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField4" layoutX="162.0" layoutY="313.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField5" layoutX="256.0" layoutY="248.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField6" layoutX="256.0" layoutY="313.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField7" layoutX="361.0" layoutY="248.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <TextField fx:id="textField8" layoutX="365.0" layoutY="313.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
-      <CheckBox fx:id="checkBox1" layoutX="56.0" layoutY="362.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
-      <CheckBox fx:id="checkBox2" layoutX="162.0" layoutY="362.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
-      <CheckBox fx:id="checkBox3" layoutX="256.0" layoutY="362.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
-      <CheckBox fx:id="checkBox4" layoutX="355.0" layoutY="362.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
-      <Text layoutX="57.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 1" />
-      <Text layoutX="162.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 2" />
-      <Text layoutX="256.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 3" />
-      <Text layoutX="361.0" layoutY="245.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 4" />
+      <TextField fx:id="textField1" layoutX="242.0" layoutY="236.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField2" layoutX="242.0" layoutY="301.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField3" layoutX="347.0" layoutY="236.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField4" layoutX="347.0" layoutY="301.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField5" layoutX="441.0" layoutY="236.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField6" layoutX="441.0" layoutY="301.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField7" layoutX="546.0" layoutY="236.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <TextField fx:id="textField8" layoutX="550.0" layoutY="301.0" onKeyTyped="#sumPumps" prefHeight="26.0" prefWidth="70.0" />
+      <CheckBox fx:id="checkBox1" layoutX="241.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <CheckBox fx:id="checkBox2" layoutX="347.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <CheckBox fx:id="checkBox3" layoutX="441.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <CheckBox fx:id="checkBox4" layoutX="540.0" layoutY="350.0" mnemonicParsing="false" onAction="#onCheckboxActive" prefHeight="30.0" prefWidth="70.0" selected="true" text="Active" />
+      <Text layoutX="242.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 1" />
+      <Text layoutX="347.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 2" />
+      <Text layoutX="441.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 3" />
+      <Text layoutX="546.0" layoutY="233.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Pomp 4" />
       <TextField fx:id="textFieldSum" layoutX="569.0" layoutY="540.0" />
       <Text layoutX="605.0" layoutY="522.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consumption" />
       <ComboBox fx:id="comboBox" layoutX="23.0" layoutY="483.0" onAction="#priceOfKwh" prefHeight="27.0" prefWidth="184.0" value="Zachodnio-pomorskie">
@@ -46,18 +48,31 @@
             </FXCollections>
          </items>
       </ComboBox>
-      <TextField fx:id="textFieldPrice" editable="false" layoutX="26.0" layoutY="540.0" onAction="#priceOfKwh" prefHeight="26.0" prefWidth="70.0" />
+
+       <ComboBox fx:id="comboBox2" layoutX="430.0" layoutY="540.0" onAction="#daily" prefHeight="27.0" prefWidth="108.0" value="Daily">
+           <items>
+               <FXCollections fx:factory="observableArrayList">
+                   <String fx:value="Daily" />
+                   <String fx:value="Weekly" />
+                   <String fx:value="Monthly" />
+               </FXCollections>
+           </items>
+       </ComboBox>
+      <TextField fx:id="textFieldPrice" editable="false" layoutX="26.0" layoutY="540.0" onAction="#priceOfKwh" prefHeight="26.0" prefWidth="70.0" text="0.63" />
       <Text layoutX="26.0" layoutY="529.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Price of kwh" wrappingWidth="89.0" />
       <MenuBar layoutX="-2.0" prefHeight="26.0" prefWidth="800.0">
          <menus>
             <Menu mnemonicParsing="false" text="File">
                <items>
-                  <MenuItem mnemonicParsing="false" text="Close" />
-               </items>
-            </Menu>
-            <Menu mnemonicParsing="false" text="Edit">
-               <items>
-                  <MenuItem mnemonicParsing="false" text="Delete" />
+                  <MenuItem fx:id="saveMenuItem" mnemonicParsing="false" onAction="#save" text="Save ">
+                     <accelerator>
+                        <KeyCodeCombination alt="UP" code="S" control="DOWN" meta="UP" shift="UP" shortcut="UP" />
+                     </accelerator></MenuItem>
+                  <CustomMenuItem mnemonicParsing="false" text="Unspecified Action">
+                     <graphic>
+                        <ComboBox prefWidth="150.0" />
+                     </graphic>
+                  </CustomMenuItem>
                </items>
             </Menu>
             <Menu mnemonicParsing="false" text="Help">
@@ -65,7 +80,19 @@
                   <MenuItem fx:id="menuItemAbout" mnemonicParsing="false" onAction="#aboutInfo" text="About" />
                </items>
             </Menu>
+
          </menus>
       </MenuBar>
+      <Text layoutX="120.0" layoutY="253.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Man-hour" wrappingWidth="70.0" />
+      <Text layoutX="115.0" layoutY="310.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Consumption(W)" wrappingWidth="79.58333587646484" />
+      <TextField fx:id="textBoxHidden" layoutX="269.0" layoutY="541.0" text="1" visible="false" />
+      <ComboBox fx:id="comboBoxTlo" layoutX="59.0" layoutY="49.0" onAction="#setColor" prefWidth="150.0" value="light">
+         <items>
+            <FXCollections fx:factory="observableArrayList">
+               <String fx:value="dark" />
+               <String fx:value="light" />
+            </FXCollections>
+         </items>
+      </ComboBox>
    </children>
 </AnchorPane>
